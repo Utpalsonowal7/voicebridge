@@ -1,0 +1,18 @@
+{
+  "name": "voicebridge",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A modular voice translation prototype powered by ElevenLabs Realtime Translation.",
+  "scripts": {
+    "dev": "concurrently -n backend,frontend -c blue,green \"npm run dev --workspace backend\" \"npm run dev --workspace frontend\"",
+    "build": "npm run build --workspace frontend",
+    "start": "npm run start --workspace backend"
+  },
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
